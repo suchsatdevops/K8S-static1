@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: k8s-static
-  Namespace: static
+  namespace: static
 spec:
   selector:
     matchLabels:
