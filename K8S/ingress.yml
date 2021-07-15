@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: k8s-static-ing
+ namespace: static
+ annotations:
+   kubernetes.io/ingress.class: nginx
+spec:
+ rules:
+ - host: k8s-static.suchsatdevops.xyz
+   http:
+     paths:
+     - path:
+       backend:
+         serviceName: k8s-static-svc
+         servicePort: 80
